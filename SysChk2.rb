@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'shotgun'
 
-def whowon (score)
+def who_won (score)
   if score[:home_score] > score[:away_score]
     return score[:home_team]
   else
@@ -9,7 +9,7 @@ def whowon (score)
   end
 end
 
-def wholost (score)
+def who_lost (score)
   if score[:home_score] < score[:away_score]
     return score[:home_team]
   else
