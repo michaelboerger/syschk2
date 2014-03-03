@@ -67,8 +67,8 @@ get '/leaderboard' do
   ]
 
   @scores.each do |score|
-      score[:winner] = whowon(score)
-      score[:loser] = wholost(score)
+      score[:winner] = who_won(score)
+      score[:loser] = who_lost(score)
       @teams.each do |team|
         if score[:winner] == team[:team_name]
           team[:win_count]+=1
