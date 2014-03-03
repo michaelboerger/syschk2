@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+    <body>
+      <h1>Results</h1>
+        <% @scores.each do |score| %>
+        Home: <%= score[:home_team] %> <%= score[:home_score] %>
+        Away: <%= score[:away_team] %> <%= score[:away_score] %>
+        Winner: <%= score[:winner] %><br/>
+        <% end %>
+        <h1>Standings</h1>
+        <% @teams.each do |team| %>
+        Team: <%= team[:team_name] %>
+        Wins: <%= team[:win_count] %>
+        Losses: <%= team[:loss_count].abs %><br/>
+        <% end %>
+    </body>
+</html>
